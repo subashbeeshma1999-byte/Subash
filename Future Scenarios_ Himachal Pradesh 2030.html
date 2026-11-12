@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Future Scenarios | Himachal Pradesh 2030</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff; --ink:#0d0d0d; --body:#666; --pill:#f0f0f0; --rule:#e6e6e6; --card:#f7f8fa;
+  --accent:#2f6fd6; --hi:#e3f4ea; --hi-ink:#14663a; --lo:#fdeccf; --lo-ink:#8a4b05;
+  --nav:#1b1b1b;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  scroll-padding-top:env(safe-area-inset-top,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1115; --ink:#f4f5f7; --body:#a7adb8; --pill:#23262d; --rule:#2a2e36; --card:#171a20;
+    --accent:#6da2ff; --hi:#143524; --hi-ink:#7fdca5; --lo:#3a2a0c; --lo-ink:#f3c677; --nav:#000;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1115; --ink:#f4f5f7; --body:#a7adb8; --pill:#23262d; --rule:#2a2e36; --card:#171a20;
+  --accent:#6da2ff; --hi:#143524; --hi-ink:#7fdca5; --lo:#3a2a0c; --lo-ink:#f3c677; --nav:#000;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* Nav */
+.nav{background:var(--nav);color:#fff}
+.nav-in{max-width:1280px;margin:0 auto;padding:22px 32px;display:flex;align-items:center;gap:40px}
+.logo{font-weight:600;font-size:34px;letter-spacing:-.04em;text-decoration:none}
+.nav ul{list-style:none;margin:0 auto;padding:0;display:flex;gap:44px;overflow-x:auto;white-space:nowrap}
+.nav li a{font-size:15px;text-decoration:none;text-transform:uppercase;padding:6px 0;display:inline-block}
+.nav li a:hover{text-decoration:underline;text-underline-offset:6px}
+
+/* Article */
+.wrap{max-width:980px;margin:0 auto;padding:56px 24px 0}
+.pill{display:inline-block;background:var(--pill);color:var(--body);font-size:15px;padding:12px 24px;border-radius:999px;margin:0}
+h1{font-size:clamp(28px,4.2vw,40px);line-height:1.2;font-weight:600;margin:40px 0 40px;letter-spacing:-.01em;max-width:24ch}
+.hero{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:16/8.2;background:#1a2a55;margin:0}
+.hero svg{position:absolute;inset:0;width:100%;height:100%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,14,40,.78),rgba(8,14,40,0) 62%)}
+.hero-t{position:absolute;z-index:1;left:clamp(20px,4vw,48px);bottom:clamp(18px,3.5vw,44px);margin:0;color:#fff;font-weight:600;font-size:clamp(22px,4.4vw,48px);line-height:1.1;letter-spacing:-.01em;text-transform:uppercase}
+.hero-t span{display:block}
+h2{font-size:22px;font-weight:500;margin:48px 0 14px}
+.wrap p.t{font-size:19px;line-height:1.95;color:var(--body);margin:0;max-width:62ch}
+
+/* Scenarios */
+.sc{max-width:1180px;margin:0 auto;padding:88px 24px 0}
+.sc h2.big{font-size:clamp(24px,3.2vw,34px);line-height:1.25;font-weight:600;margin:0 0 40px;max-width:26ch;letter-spacing:-.01em}
+.tbl{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:1.25fr .8fr .95fr .8fr 2fr;gap:0 24px;padding:28px 0;border-bottom:1px solid var(--rule);align-items:start}
+.row.head{padding:14px 0;font-size:12.5px;font-weight:500;color:var(--body);text-transform:uppercase;letter-spacing:.04em}
+.num{display:block;color:var(--accent);font-size:14px;font-weight:500;margin-bottom:6px}
+.name{font-size:20px;font-weight:600;line-height:1.3;margin:0}
+.chip{display:inline-block;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;letter-spacing:.03em}
+.chip.hi{background:var(--hi);color:var(--hi-ink)}
+.chip.lo{background:var(--lo);color:var(--lo-ink)}
+.out strong{display:block;font-size:16px;font-weight:600;margin-bottom:6px}
+.out p{margin:0 0 12px;font-size:15.5px;line-height:1.7;color:var(--body)}
+.tag{font-size:13px;font-weight:500;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:4px 14px;display:inline-block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* Flow, decision, link */
+.next{max-width:980px;margin:0 auto;padding:88px 24px 96px}
+.lbl{font-size:14px;font-weight:500;color:var(--body);margin:0 0 14px}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:12px;margin:0 0 44px}
+.flow div{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:20px 26px;font-size:18px;font-weight:500}
+.flow i{align-self:center;font-style:normal;font-size:22px;color:var(--accent)}
+.dec{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 56px}
+.dec span{background:var(--pill);border-radius:999px;padding:12px 26px;font-size:17px;font-weight:500}
+.cta{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:500;font-size:17px;padding:16px 32px;border-radius:999px;transition:background .2s}
+.cta:hover{background:var(--accent);color:#fff}
+
+@media (max-width:1000px){
+  .nav-in{gap:20px;padding:18px 20px}
+  .nav ul{gap:28px;margin:0}
+  .row.head{display:none}
+  .row{grid-template-columns:1fr 1fr 1fr;gap:16px}
+  .row>.who,.row>.out{grid-column:1/-1}
+  .row>[data-l]::before{content:attr(data-l);display:block;font-size:11.5px;color:var(--body);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+}
+@media (max-width:560px){
+  .row{grid-template-columns:1fr}
+  .wrap p.t{font-size:17px}
+  .nav-in{flex-direction:column;align-items:flex-start;gap:8px}
+  .nav ul{max-width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="Home">ZM</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#top">About us</a></li>
+        <li><a href="#top">What we do</a></li>
+        <li><a href="#top">Who we serve</a></li>
+        <li><a href="#top">Why us</a></li>
+        <li><a href="#top">Social good</a></li>
+        <li><a href="#top">Resources</a></li>
+        <li><a href="#top">Careers</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <article class="wrap">
+    <p class="pill">03 / Future Scenarios</p>
+    <h1>What if the future doesn’t unfold the way your strategy assumes?</h1>
+
+    <figure class="hero" role="img" aria-label="Illustration of Himachal mountain ridges at dusk">
+      <svg viewBox="0 0 1200 616" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1b2f6b"/><stop offset=".45" stop-color="#5b67b8"/>
+            <stop offset=".75" stop-color="#e58aa6"/><stop offset="1" stop-color="#ffb877"/>
+          </linearGradient>
+          <radialGradient id="sun" cx=".7" cy=".62" r=".35">
+            <stop offset="0" stop-color="#fff2c9" stop-opacity=".95"/><stop offset="1" stop-color="#ffd59a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="1200" height="616" fill="url(#sky)"/>
+        <rect width="1200" height="616" fill="url(#sun)"/>
+        <path d="M0 360 L120 270 L210 330 L340 200 L470 320 L560 260 L700 350 L820 240 L960 330 L1080 270 L1200 340 V616 H0Z" fill="#7d79b6" opacity=".75"/>
+        <path d="M0 430 L90 360 L200 410 L330 300 L430 390 L560 330 L690 420 L820 320 L950 410 L1070 350 L1200 420 V616 H0Z" fill="#4b4f93"/>
+        <path d="M330 300 L305 330 L330 322 L350 338 L360 318Z M820 320 L795 350 L822 342 L842 358 L850 338Z" fill="#f4f1ff" opacity=".9"/>
+        <path d="M0 500 L110 450 L230 495 L380 420 L520 500 L660 440 L800 505 L950 445 L1100 500 L1200 470 V616 H0Z" fill="#232a63"/>
+        <path d="M0 560 L160 520 L320 555 L520 515 L720 560 L920 520 L1200 565 V616 H0Z" fill="#141a40"/>
+      </svg>
+      <h2 class="hero-t" style="margin:0;font-size:clamp(22px,4.4vw,48px)"><span>Himachal Pradesh /</span><span>2030 Scenarios</span></h2>
+    </figure>
+
+    <h2>The challenge</h2>
+    <p class="t">Strategy inevitably contains assumptions about the future. The danger is treating one expected future as a forecast and building plans around assumptions that may not survive major technological, economic, regulatory or environmental change.</p>
+
+    <h2>Approach</h2>
+    <p class="t">Identify the uncertainties capable of materially changing the future, explore how they interact and construct a small number of plausible, internally coherent future worlds.</p>
+
+    <h2>What it reveals</h2>
+    <p class="t">Instead of predicting which future will occur, management can identify choices that remain robust across futures, options worth preserving and signals that indicate which future may be emerging.</p>
+  </article>
+
+  <section class="sc" aria-labelledby="sc-t">
+    <h2 class="big" id="sc-t">Four plausible futures, each demanding different strategic choices.</h2>
+
+    <div class="tbl" role="table" aria-label="Himachal Pradesh 2030 scenarios">
+      <div class="row head" role="row">
+        <div role="columnheader">Scenario</div>
+        <div role="columnheader">Private investment</div>
+        <div role="columnheader">Tech-driven sustainability</div>
+        <div role="columnheader">State climate action</div>
+        <div role="columnheader"><span class="sr">Outcome</span></div>
+      </div>
+
+      <div class="row" role="row">
+        <div class="who" role="cell"><span class="num">01</span><p class="name">Himalayan Renaissance</p></div>
+        <div role="cell" data-l="Private investment"><span class="chip hi">HIGH</span></div>
+        <div role="cell" data-l="Tech-driven sustainability"><span class="chip hi">HIGH</span></div>
+        <div role="cell" data-l="State climate action"><span class="chip hi">STRONG</span></div>
+        <div class="out" role="cell"><strong>Prosperity + resilience</strong><p>Investment, technology and strong climate action reinforce sustainable growth.</p><span class="tag">Sustainable growth</span></div>
+      </div>
+
+      <div class="row" role="row">
+        <div class="who" role="cell"><span class="num">02</span><p class="name">Fragile Growth</p></div>
+        <div role="cell" data-l="Private investment"><span class="chip hi">HIGH</span></div>
+        <div role="cell" data-l="Tech-driven sustainability"><span class="chip lo">LOW</span></div>
+        <div role="cell" data-l="State climate action"><span class="chip lo">WEAK</span></div>
+        <div class="out" role="cell"><strong>Growth without resilience</strong><p>Investment drives expansion, but weak sustainability creates environmental and infrastructure stress.</p><span class="tag">Vulnerable growth</span></div>
+      </div>
+
+      <div class="row" role="row">
+        <div class="who" role="cell"><span class="num">03</span><p class="name">Eco-Tech Divide</p></div>
+        <div role="cell" data-l="Private investment"><span class="chip lo">LOW</span></div>
+        <div role="cell" data-l="Tech-driven sustainability"><span class="chip hi">HIGH</span></div>
+        <div role="cell" data-l="State climate action"><span class="chip hi">STRONG</span></div>
+        <div class="out" role="cell"><strong>Resilience without prosperity</strong><p>Technology and climate action advance, but weak investment limits jobs and broad-based growth.</p><span class="tag">Uneven transition</span></div>
+      </div>
+
+      <div class="row" role="row">
+        <div class="who" role="cell"><span class="num">04</span><p class="name">Climate Spiral</p></div>
+        <div role="cell" data-l="Private investment"><span class="chip lo">LOW</span></div>
+        <div role="cell" data-l="Tech-driven sustainability"><span class="chip lo">LOW</span></div>
+        <div role="cell" data-l="State climate action"><span class="chip lo">WEAK</span></div>
+        <div class="out" role="cell"><strong>Neither growth nor resilience</strong><p>Weak investment, technology adoption and climate action reinforce economic and environmental decline.</p><span class="tag">Systemic vulnerability</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="next" aria-label="From scenarios to decisions">
+    <p class="lbl">Flow</p>
+    <div class="flow">
+      <div>Critical uncertainties</div><i aria-hidden="true">→</i>
+      <div>Plausible futures</div><i aria-hidden="true">→</i>
+      <div>Strategic choices</div>
+    </div>
+
+    <p class="lbl">Decision</p>
+    <div class="dec"><span>Act now</span><span>Preserve options</span><span>Monitor</span></div>
+
+    <a class="cta" href="#top">Discuss your future scenarios →</a>
+  </section>
+</main>
+
+</body>
+</html>
